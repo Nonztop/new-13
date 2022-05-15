@@ -1,0 +1,116 @@
+/* Add Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&amp;display=swap');
+ 
+/* All Class using same dataset */
+:root{
+    /* Define Variables */
+    --accent : #FD6B6B; /* Check Color Code from Figma */
+    --accentHover : #F3B6B6; /* Mouse Hover -> Light */
+    --dark80 : rgba(68, 90, 139, 0.8); /* 0.8 = 80% */
+    --dark60 : rgba(68, 90, 139, 0.6); /* 0.6 = 60% */
+    --light : #FFFFFF;
+    --transition : all 0.3s ease 0s /* Define delay time */
+}
+ 
+/* All Section */
+*{
+    /* Clear margin and padding */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+html, body{
+    height: 100%; /* Fixed Height using Scroll */
+    overflow: auto; /* Enter New Line */ 
+}
+ 
+body{
+    /* Gradient Shade of Color */
+    background: linear-gradient(
+        var(--dark60), var(--dark60)
+    ), 
+    url(./images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Scale Fixed Screen */ 
+}
+ 
+a, button, p{
+    font-family: "Lato", sans-serif;
+    color: var(--light);
+}
+ 
+a, button, .logo{
+    cursor: pointer; /* Link Element (Login) --> Hand Cursor */
+}
+ 
+main{
+    height: 100%;
+    display: grid; /* Work on grid*/
+    grid-template-columns: minmax(60px, 1fr) repeat(6,minmax(50px,190px)) 
+    minmax(60px,1fr);
+}
+ 
+header{
+    grid-column: 2 / span 6; /* header start 2nd col &amp; others last column */
+}
+ 
+nav{
+    display: flex;
+    align-items: center;
+    height: 150px;
+}
+ 
+/* Class */
+.links{
+    margin-left: auto;
+}
+ 
+.links a, .links button{
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: var(--transition); /* Action */
+}
+ 
+.links a{
+    margin-right: 20px;
+}
+ 
+.links a:hover{
+    color: var(--accentHover); /* Cursor Hover -> Change Color*/
+}
+ 
+.button_med{
+    border: none;
+    background-color: var(--accent);
+    padding: 8px 25px;
+    transition: var(--transition); /* Action */
+}
+ 
+.button_med:hover{
+    color: var(--accentHover);
+}
+ 
+.info{
+    grid-column: 3 / span 4;
+    margin-top: 23%;
+    text-align: center;
+}
+ 
+.content_font1{
+    font-family: "Lato", sans-serif;
+    color: black;
+    font-size: 3.5rem;
+}
+ 
+.content_font2{
+    font-family: "Lato", sans-serif;
+    color: var(--light);
+    font-size: 1.5rem;
+}
+ 
+.icons{
+    margin-top: 10%;
+    display: flex;
+}
